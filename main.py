@@ -39,16 +39,9 @@ while run:
     # Handle stuff that the user has done here #
     ############################################
     
-
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             run = False
-
-        #if event.type == pygame.MOUSEBUTTONDOWN:
-            #tower1x = event.pos[0] - tower1width / 2
-            #tower1y = event.pos[1] - tower1height / 2
-            #chickens.append(event.pos)
-            #tower1RBG = 20,130,20
 
         if event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE:
             chickens.append(Chicken((playerx + 5, 575)))
@@ -95,12 +88,6 @@ while run:
             hasHit = False
             if (enemy.pos[1] + 50) > chicken.pos[1] and (enemy.pos[0] < (chicken.pos[0] + 50) and enemy.pos[0] + 50 > chicken.pos[0]):
                 hasHit = True
-            #elif (enemy.pos[1] + 50) > chicken.pos[1] and (enemy.pos[0] + 50) < chicken.pos[0]:
-             #   hasHit = True
-            # if (enemy.pos[1] + 50) > chicken.pos[1] and enemy.pos[0] < (chicken.pos[0] + 50):
-            #     hasHit = True
-            # if (enemy.pos[1] + 50) > chicken.pos[1] and enemy.pos[0] < (chicken.pos[0] + 50): 
-            #     hasHit = True
 
             if hasHit == True:
                 if chickensToDelete.__contains__(chicken) == False:
