@@ -82,7 +82,6 @@ while run:
         if chicken.pos[1] < -50:
            chickensToDelete.append(chicken)
 
-    
     for enemy in enemys:
         for chicken in chickens:
             hasHit = False
