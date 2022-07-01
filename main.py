@@ -8,7 +8,6 @@ class Zombie:
         self.pos = pos
         self.health = health
 
-
 class Chicken:
     def __init__(self, pos):
         self.pos = pos
