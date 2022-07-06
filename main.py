@@ -66,7 +66,7 @@ while run:
     #########################################
     if datetime.now() > spawnzombie:
         enemys.append(Zombie((random.randint(200, 900), 0), 2))
-        spawnzombie = spawnzombie + timedelta(seconds = random.randint(0, 1))
+        spawnzombie = spawnzombie + timedelta(seconds = random.randint(1, 2))
 
     enemysToDelete = []
     for enemy in enemys:
@@ -91,8 +91,6 @@ while run:
             if hasHit == True:
                 if chickensToDelete.__contains__(chicken) == False:
                     chickensToDelete.append(chicken)
-                enemy.health = enemy.health - 1
-                if enemy.health == 0:
                     if enemysToDelete.__contains__(enemys) == False:
                         enemysToDelete.append(enemy)
 
